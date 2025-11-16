@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maryam Design Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0c0c0c;
+            color: #f5d66c;
+            overflow-x: hidden;
+        }
+
+        /* ================= HEADER ================= */
+        header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 20px 60px;
+            background: rgba(0,0,0,0.85);
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            border-bottom: 1px solid gold;
+            backdrop-filter: blur(5px);
+        }
+
+        /* 3D MM Logo */
+        .logo {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: gold;
+            animation: spin 5s infinite linear;
+        }
+        @keyframes spin {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+
+        nav a {
+            color: gold;
+            margin-left: 25px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: .3s;
+        }
+        nav a:hover { color: white; }
+
+        /* ================ HERO ================ */
+        .hero {
+            height: 100vh;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            padding-top: 100px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px gold;
+        }
+        .hero p { font-size: 1.3rem; color: #eee; }
+
+        /* Fade Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0px); }
+        }
+
+        /* ================= ABOUT ================= */
+        .about {
+            padding: 80px 60px;
+            text-align: center;
+            background: #111;
+            animation: slideIn 1.5s ease;
+        }
+        @keyframes slideIn {
+            0% { opacity: 0; transform: translateX(-50px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: gold;
+        }
+        .about p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.8;
+            color: #e6e6e6;
+            font-size: 1.2rem;
+        }
+
+        /* ================= PORTFOLIO GRID ================= */
+        .portfolio {
+            padding: 60px;
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+        .portfolio img {
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid gold;
+            transition: .5s;
+            box-shadow: 0 0 10px gold;
+            cursor: pointer;
+        }
+        .portfolio img:hover {
+            transform: scale(1.06);
+            box-shadow: 0 0 25px gold;
+        }
+
+        /* ================= IMAGE POPUP ================= */
+        .popup {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        .popup img {
+            width: 85%;
+            max-width: 900px;
+            border: 3px solid gold;
+            border-radius: 10px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            font-size: 3rem;
+            color: gold;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* ================= CONTACT ================= */
+        .contact {
+            padding: 80px 60px;
+            text-align: center;
+            background: black;
+        }
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: gold;
+        }
+        .contact a {
+            display: inline-block;
+            margin: 15px;
+            padding: 12px 25px;
+            color: gold;
+            text-decoration: none;
+            border: 2px solid gold;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            transition: .3s;
+        }
+        .contact a:hover {
+            background: gold;
+            color: black;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #000;
+            border-top: 1px solid gold;
+            font-size: 1.2rem;
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">MM</div>
+    <nav>
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+    <h1>Maryam Design</h1>
+    <p>Graphic Designer • Creative Artist • Visual Creator</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+    <h2>About Maryam</h2>
+    <p>
+        Maryam is a passionate graphic designer who creates modern, clean, and visually powerful designs.
+        She specializes in <strong>posters, brand identity, banners, logos, marketing graphics, and digital artwork</strong>.
+        <br><br>
+        Her style blends luxury aesthetics with bold creativity—delivering designs that stand out and tell a story.
+        Every project is crafted with precision, emotion, and artistic vision.
+    </p>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio">
+    <img src="images/poster1.jpg" onclick="openPopup(this.src)">
+    <img src="images/poster2.jpg" onclick="openPopup(this.src)">
+    <img src="images/poster3.jpg" onclick="openPopup(this.src)">
+    <img src="images/poster4.jpg" onclick="openPopup(this.src)">
+    <img src="images/poster5.jpg" onclick="openPopup(this.src)">
+    <img src="images/poster6.jpg" onclick="openPopup(this.src)">
+    <img src="images/poster7.jpg" onclick="openPopup(this.src)">
+</section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <img id="popup-img">
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <a href="mailto:maryammrashi25@gmail.com">Email Me</a>
+    <a href="https://wa.me/254794695060" target="_blank">WhatsApp Me</a>
+</section>
+
+<!-- FOOTER WITH YOUR NAME -->
+<footer>
+    💻 Created by <strong>TECH Bonface</strong> 🐍
+</footer>
+
+<!-- JAVASCRIPT POPUP FUNCTION -->
+<script>
+    function openPopup(src) {
+        document.getElementById("popup-img").src = src;
+        document.getElementById("popup").style.display = "flex";
+    }
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
